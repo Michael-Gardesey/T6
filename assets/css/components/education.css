@@ -1,0 +1,65 @@
+.education-section {
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.education-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+}
+
+.institution {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.period {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.qualification {
+    font-weight: 500;
+}
+
+.coursework {
+    margin-top: 1.5rem;
+}
+
+.coursework h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.8rem;
+}
+
+.coursework ul {
+    list-style: none;
+}
+
+.coursework li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.coursework li::before {
+    content: '•';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
