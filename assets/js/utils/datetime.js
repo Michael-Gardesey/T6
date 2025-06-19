@@ -157,4 +157,120 @@ class DateTimeManager {
             }
 
             .utc-display:hover {
-                border-color: rgba
+                border-color: rgba(0, 246, 255, 0.4);
+                box-shadow: 0 8px 32px rgba(0, 246, 255, 0.1);
+            }
+
+            .time-container {
+                margin-bottom: 1rem;
+            }
+
+            .display-label {
+                font-size: 0.7rem;
+                color: #00f6ff;
+                margin-bottom: 0.5rem;
+                letter-spacing: 1px;
+            }
+
+            .time-value {
+                font-size: 1.2rem;
+                color: #00f6ff;
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+                text-shadow: 0 0 10px rgba(0, 246, 255, 0.3);
+            }
+
+            .separator {
+                color: rgba(255, 255, 255, 0.5);
+                animation: pulse 2s infinite;
+            }
+
+            .user-container {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid rgba(0, 246, 255, 0.1);
+            }
+
+            .user-container i {
+                color: #00f6ff;
+                font-size: 1.2rem;
+            }
+
+            .user-value {
+                font-size: 0.9rem;
+                opacity: 0.8;
+            }
+
+            .status-indicator {
+                margin-left: auto;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .status-dot {
+                width: 8px;
+                height: 8px;
+                background: #00f6ff;
+                border-radius: 50%;
+                animation: pulse 2s infinite;
+            }
+
+            .status-text {
+                font-size: 0.7rem;
+                color: #00f6ff;
+                letter-spacing: 1px;
+            }
+
+            .time-notification {
+                position: fixed;
+                bottom: 2rem;
+                right: 2rem;
+                padding: 1rem 2rem;
+                background: rgba(0, 246, 255, 0.1);
+                border: 1px solid rgba(0, 246, 255, 0.2);
+                border-radius: 8px;
+                color: #fff;
+                font-family: 'JetBrains Mono', monospace;
+                animation: fadeInOut 2s ease-in-out;
+            }
+
+            @keyframes pulse {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0.3; }
+            }
+
+            @keyframes fadeInOut {
+                0% { opacity: 0; transform: translateY(20px); }
+                20% { opacity: 1; transform: translateY(0); }
+                80% { opacity: 1; transform: translateY(0); }
+                100% { opacity: 0; transform: translateY(-20px); }
+            }
+
+            @media (max-width: 768px) {
+                .utc-display {
+                    left: 1rem;
+                    right: 1rem;
+                    top: 1rem;
+                }
+
+                .time-value {
+                    font-size: 1rem;
+                }
+            }
+        `;
+
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = styles;
+        document.head.appendChild(styleSheet);
+    }
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    const timeManager = new DateTimeManager();
+    timeManager.initialize();
+});
