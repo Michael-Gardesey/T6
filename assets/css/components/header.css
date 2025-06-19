@@ -1,0 +1,43 @@
+.cyber-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+.time-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.utc-time {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 10px rgba(0, 212, 170, 0.3);
+}
+
+.user-status {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.user-status i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+#userName {
+    color: var(--text-color);
+    font-weight: 500;
+}
